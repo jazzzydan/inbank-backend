@@ -1,11 +1,8 @@
-package ee.taltech.inbankbackend.endpoint;
+package ee.inbank.inbankbackend.endpoint;
 
-import ee.taltech.inbankbackend.exceptions.InvalidLoanAmountException;
-import ee.taltech.inbankbackend.exceptions.InvalidLoanPeriodException;
-import ee.taltech.inbankbackend.exceptions.InvalidPersonalCodeException;
-import ee.taltech.inbankbackend.exceptions.NoValidLoanException;
-import ee.taltech.inbankbackend.service.Decision;
-import ee.taltech.inbankbackend.service.DecisionEngine;
+import ee.inbank.inbankbackend.exceptions.*;
+import ee.inbank.inbankbackend.service.Decision;
+import ee.inbank.inbankbackend.service.DecisionEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,7 +49,8 @@ public class DecisionEngineController {
             response.setErrorMessage(decision.getErrorMessage());
 
             return ResponseEntity.ok(response);
-        } catch (InvalidPersonalCodeException | InvalidLoanAmountException | InvalidLoanPeriodException e) {
+        } catch (InvalidPersonalCodeException | InvalidLoanAmountException | InvalidLoanPeriodException |
+                 AgeConstraintException e) {
             response.setLoanAmount(null);
             response.setLoanPeriod(null);
             response.setErrorMessage(e.getMessage());

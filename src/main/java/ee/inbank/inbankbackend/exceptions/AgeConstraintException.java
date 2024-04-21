@@ -1,17 +1,17 @@
-package ee.taltech.inbankbackend.exceptions;
+package ee.inbank.inbankbackend.exceptions;
 
 /**
- * Thrown when requested loan amount is invalid.
+ * Thrown when no valid loan is found.
  */
-public class InvalidLoanAmountException extends Throwable {
+public class AgeConstraintException extends Throwable {
     private final String message;
     private final Throwable cause;
 
-    public InvalidLoanAmountException(String message) {
+    public AgeConstraintException(String message) {
         this(message, null);
     }
 
-    public InvalidLoanAmountException(String message, Throwable cause) {
+    public AgeConstraintException(String message, Throwable cause) {
         this.message = message;
         this.cause = cause;
     }

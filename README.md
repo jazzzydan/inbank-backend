@@ -83,3 +83,7 @@ The service consists of two main classes:
 
 - DecisionEngine: A service class that provides a method for calculating an approved loan amount and period for a customer.
 - DecisionEngineController: A REST endpoint that handles requests for loan decisions.
+
+## Codereview
+
+Code Review can be found in separate CODEREVIEW.md file

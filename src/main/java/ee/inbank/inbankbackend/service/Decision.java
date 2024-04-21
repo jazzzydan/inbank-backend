@@ -1,4 +1,4 @@
-package ee.taltech.inbankbackend.service;
+package ee.inbank.inbankbackend.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

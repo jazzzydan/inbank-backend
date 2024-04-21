@@ -1,4 +1,4 @@
-package ee.taltech.inbankbackend.endpoint;
+package ee.inbank.inbankbackend.endpoint;
 
 import lombok.Getter;
 import lombok.Setter;
