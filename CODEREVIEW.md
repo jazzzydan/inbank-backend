@@ -41,7 +41,7 @@ Constants were defined correctly.
 + Repository, DTO and mapper not produced as there is no real connection to database.
 + DecisionEngineService class updated to handle Customer entity.
 + Country codes and life expectancy added to DecisionEngineConstants class. (even thought this data might be retrieved from DB in real life scenario)
-+ AgeConstraintException class created to stay consistent with previously created code.
++ AgeConstraintException class created to stay consistent with previously created error handling code.
 + DecisionEngine class method public Decision calculateApprovedLoan updated to handle Customer entity.
 + private boolean customerAgeOutOfRange method created to handle age constraints.
 + as there is no DB, customer country of residency is handled with switch statement. Otherwise it would be a query to DB.
